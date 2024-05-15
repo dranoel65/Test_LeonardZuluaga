@@ -20,20 +20,20 @@ variables:
   templateFile: './main.bicep'
   #csmParametersFile: './main.bicepparam'
   
-  pool:
-    vmImage: $(vmImageName)
+pool:
+  vmImage: $(vmImageName)
   
-  steps:
-  - task: AzureResourceManagerTemplateDeployment@3
-    inputs:
-      deploymentScope: 'Resource Group'
-      azureSubscription: '${{ parameters.azureServiceConnection }}'
-      action: 'Create Or Update Resource Group'
-      resourceGroupName: '$(resourceGroupName)'
-      location: '$(location)'
-      templateLocation: 'Linked artifact'
-      csmFile: '$(templateFile)'
-      csmParametersFile: '$(csmParametersFile)'
-      overrideParameters: '-storageAccountType Standard_LRS'
-      deploymentMode: 'Incremental'
-      deploymentName: 'DeployPipelineTemplate'
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureSubscription: '${{ parameters.azureServiceConnection }}'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: '$(resourceGroupName)'
+    location: '$(location)'
+    templateLocation: 'Linked artifact'
+    csmFile: '$(templateFile)'
+    csmParametersFile: '$(csmParametersFile)'
+    overrideParameters: '-storageAccountType Standard_LRS'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
