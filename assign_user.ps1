@@ -1,0 +1,2 @@
+Set-AzKeyVaultAccessPolicy -VaultName  -UserPrincipalName "fabio.rincon@arroyoconsulting.net" -PermissionsToSecrets set,delete,get,list
+Set-AzKeyVaultAccessPolicy -VaultName  -UserPrincipalName "andres.zapata@arroyoconsulting.net" -PermissionsToSecrets set,delete,get,list
