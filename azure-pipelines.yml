@@ -35,5 +35,5 @@ steps:
     csmFile: '$(templateFile)'
 #    csmParametersFile: '$(csmParametersFile)'
 #    overrideParameters: '-storageAccountType Standard_LRS'
-    deploymentMode: 'Incremental'
-    deploymentName: 'DeployPipelineTemplate'
+    deploymentMode: 'Complete'
+    deploymentName: 'Test_Leo_Deploy'
