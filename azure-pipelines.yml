@@ -26,10 +26,10 @@ pool:
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Resource Group'
-    connectedServiceName: '${{ parameters.azureServiceConnection }}'
+    deploymentScope: 'Subscription'
+    azureResourceManagerConnection: '${{ parameters.azureServiceConnection }}'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: '$(resourceGroupName)'
+#   resourceGroupName: '$(resourceGroupName)'
     location: '$(location)'
     templateLocation: 'Linked artifact'
     csmFile: '$(templateFile)'
