@@ -11,7 +11,7 @@ name: Deploy Bicep files
 parameters:
 - name: azureServiceConnection
   type: string
-  default: 'Test_LeonardZuluaga'
+  default: 'Arroyo_Challenge-Test_LeonardZuluaga'
   
 variables:
   vmImageName: 'ubuntu-latest'
