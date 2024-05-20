@@ -33,7 +33,7 @@ var subnetName = '${toLower(vmName)}-subnet'
 var OSDiskName = '${vmName}-OSDisk'
 var networkInterfaceName = '${vmName}-nic'
 var publicIpAddressName = '${vmName}-ip'
-var networkSecurityGroupName = '${subnetName}-nsg'
+//var networkSecurityGroupName = '${subnetName}-nsg'
 
 var addressPrefix = '10.0.0.0/16'
 var subnetPrefix = '10.0.0.0/24'
