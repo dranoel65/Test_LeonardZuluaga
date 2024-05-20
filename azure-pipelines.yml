@@ -11,14 +11,14 @@ name: Deploy Bicep files
 parameters:
 - name: azureServiceConnection
   type: string
-  default: 'LeoTestSC'
+  default: 'LeoSC'
   
 variables:
   vmImageName: 'ubuntu-latest'
-  resourceGroupName: 'Test_LeonardZuluaga'
-  location: eastus
+#  resourceGroupName: 'LeonardZuluagaRG'
+#  location: eastus
   templateFile: './main.bicep'
-  #csmParametersFile: './main.bicepparam'
+#csmParametersFile: './main.bicepparam'
   
 pool:
   vmImage: $(vmImageName)
@@ -29,11 +29,11 @@ steps:
     deploymentScope: 'Subscription'
     azureResourceManagerConnection: '${{ parameters.azureServiceConnection }}'
     action: 'Create Or Update Resource Group'
-#   resourceGroupName: '$(resourceGroupName)'
+#    resourceGroupName: '$(resourceGroupName)'
     location: '$(location)'
     templateLocation: 'Linked artifact'
     csmFile: '$(templateFile)'
 #    csmParametersFile: '$(csmParametersFile)'
 #    overrideParameters: '-storageAccountType Standard_LRS'
-    deploymentMode: 'Incremental'
-    deploymentName: 'Test_Leo_Deploy'
+#    deploymentMode: 'Incremental'
+#    deploymentName: 'Test_Leo_Deploy'

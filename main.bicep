@@ -1,7 +1,7 @@
 targetScope = 'subscription'
 
 resource rg 'Microsoft.Resources/resourceGroups@2022-09-01' = {
-  name: 'Test_LeonardZuluaga'
+  name: 'LeonardZuluagaRG'
   location: 'eastus'
 }
 
