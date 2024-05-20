@@ -9,7 +9,7 @@ module vm './vm.bicep' = {
   name: 'vm_Leo'
   scope: rg
   params: {
-    vmName: 'vm_leonardZuluaga'
+    vmName: 'vm_Leo'
     adminPassword: 'DrAnOeL1!'
     vmSize: 'Standard_D2s_v3'
     diskType: 'StandardSSD_LRS'
