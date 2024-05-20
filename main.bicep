@@ -6,10 +6,10 @@ resource rg 'Microsoft.Resources/resourceGroups@2022-09-01' = {
 }
 
 module vm './vm.bicep' = {
-  name: 'vm_Leo'
+  name: 'vmLeo'
   scope: rg
   params: {
-    vmName: 'vm_Leo'
+    vmName: 'vmLeo'
     adminPassword: 'DrAnOeL1!'
     vmSize: 'Standard_D2s_v3'
     diskType: 'StandardSSD_LRS'
