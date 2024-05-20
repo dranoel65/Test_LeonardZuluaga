@@ -11,7 +11,7 @@ name: Deploy Bicep files
 parameters:
 - name: azureServiceConnection
   type: string
-  default: 'LeoSC'
+  default: 'ServiceConnection'
   
 variables:
   vmImageName: 'ubuntu-latest'
