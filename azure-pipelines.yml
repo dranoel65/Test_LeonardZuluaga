@@ -26,7 +26,7 @@ pool:
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Subscription'
+    deploymentScope: 'Resource Group'
     azureResourceManagerConnection: '${{ parameters.azureServiceConnection }}'
     action: 'Create Or Update Resource Group'
 #   resourceGroupName: '$(resourceGroupName)'
