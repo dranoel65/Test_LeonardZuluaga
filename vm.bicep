@@ -83,7 +83,7 @@ resource nsgRuleHTTP 'Microsoft.Network/networkSecurityGroups/securityRules@2021
   parent: nsg
   name: 'test-allow-http'
   properties: {
-    priority: 1000
+    priority: 2000
     access: 'Allow'
     direction: 'Inbound'
     destinationPortRange: '80'
@@ -98,7 +98,7 @@ resource nsgRuleHTTPS 'Microsoft.Network/networkSecurityGroups/securityRules@202
   parent: nsg
   name: 'test-allow-https'
   properties: {
-    priority: 1000
+    priority: 3000
     access: 'Allow'
     direction: 'Inbound'
     destinationPortRange: '443'
@@ -113,7 +113,7 @@ resource nsgRuleSQL 'Microsoft.Network/networkSecurityGroups/securityRules@2021-
   parent: nsg
   name: 'test-allow-sql'
   properties: {
-    priority: 1000
+    priority: 4000
     access: 'Allow'
     direction: 'Inbound'
     destinationPortRanges: ['1433', '1434']
