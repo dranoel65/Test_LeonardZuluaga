@@ -18,5 +18,6 @@ module vm './vm.bicep' = {
     OSsku: '2022-Datacenter'  
     OSversion: 'latest'
     dataDisksCount: 1
+    nsgName: 'leoNSG'
   }
 }
