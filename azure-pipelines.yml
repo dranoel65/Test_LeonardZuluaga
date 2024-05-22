@@ -42,6 +42,8 @@ steps:
   displayName: Azure CLI
   inputs:
     azureSubscription: '${{ parameters.azureServiceConnection }}'
-    scriptType: ps
+    scriptType: pscore
     scriptLocation: inlineScript
-    inlineScript: './setup.ps1'
+    inlineScript: |
+      az vm run-command invoke  --command-id RunPowerShellScript --name vmLeo \
+      --scripts @setup.ps1"
