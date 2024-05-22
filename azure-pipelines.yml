@@ -45,5 +45,4 @@ steps:
     scriptType: pscore
     scriptLocation: inlineScript
     inlineScript: |
-      az vm run-command invoke  --command-id RunPowerShellScript --name vmLeo \
-      --scripts @setup.ps1"
+      az vm run-command invoke  --command-id RunPowerShellScript --name vmLeo --scripts @setup.ps1"
