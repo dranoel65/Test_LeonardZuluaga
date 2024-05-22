@@ -37,3 +37,12 @@ steps:
 #    overrideParameters: '-storageAccountType Standard_LRS'
 #    deploymentMode: 'Incremental'
 #    deploymentName: 'Test_Leo_Deploy'
+
+- task: AzureCLI@2
+  displayName: Azure CLI
+  inputs:
+    azureSubscription: '${{ parameters.azureServiceConnection }}'
+    scriptType: ps
+    scriptLocation: inlineScript
+    inlineScript: |
+    az vm run-command invoke  --command-id RunPowerShellScript --name vmLeo --scripts @setup.ps1
