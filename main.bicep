@@ -1,4 +1,4 @@
-param resourceGroupName string
+param resourceGroupName string = 'LeonardZuluagaRG'
 targetScope = 'subscription'
 
 resource rg 'Microsoft.Resources/resourceGroups@2022-09-01' = {
