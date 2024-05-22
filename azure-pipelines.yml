@@ -12,6 +12,9 @@ parameters:
 - name: azureServiceConnection
   type: string
   default: 'ServiceConnection'
+- name: resourceGroupName
+  type: string
+  default: 'LeonardZuluagaRG'
   
 variables:
   vmImageName: 'ubuntu-latest'
@@ -29,7 +32,7 @@ steps:
     deploymentScope: 'Subscription'
     azureResourceManagerConnection: '${{ parameters.azureServiceConnection }}'
     action: 'Create Or Update Resource Group'
-#    resourceGroupName: '$(resourceGroupName)'
+    resourceGroupName: '$(resourceGroupName)'
     location: '$(location)'
     templateLocation: 'Linked artifact'
     csmFile: '$(templateFile)'
